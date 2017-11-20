@@ -31,11 +31,11 @@ Con
 
 ![](fig-1.jpg)
 
-Servo controller chip marking is lasered off. Suspect a variant of `MAC900` servo ASIC. MAX900 requires an external crystal and uses a different pin for pwm input. The same board is used in both servo and continuous rotation motor models. There are some contact pads on the other side of the board, possibly for programming/configuration.
+Servo controller chip marking is lasered off. Suspect a variant of `MAC900` servo ASIC. MAX900 requires an external crystal and uses a different pin for PWM input. The same board is used in both servo and continuous rotation motor models. There are some contact pads on the other side of the board, possibly for programming/configuration.
 
 **`J3Y`** `S8050` NPN transistors. Ic = 0.5 A. Vce_max = 25 V. They are possibly gate drivers.
 
-**`V1PL`** no information found. Likely an LDO. This board have been overvoltaged to 30 V and there is a short to ground after the LDO.
+**`V1PL`** no information found. Likely an LDO. This board has been overvoltaged to 30 V and there is a short to ground after the LDO.
 
 Input bulk capacitor rated for 16 V 100 uF.
 
@@ -56,6 +56,7 @@ Con
 
 - Hand soldering quality is poor.
 - Lasering off chip marking reveals insecurity.
+- Motor PWM frequency is probably low (~400 Hz).
 
 
 
@@ -74,11 +75,17 @@ Motor marking:
 20170630-5,0
 ```
 
-Suspected manufacturer: [Sinbad Motor](http://www.sinbad-motor.com/prod_view.aspx?TypeId=27&Id=175&FId=t3:27:3), a Chinese motor manufacturer that makes drop-in Maxon replacements. They seem to offer maxon-style customization. I couldn't find a datasheet from the their website. The product page says the maximum efficiency is 85% (I don't believe it). The retail price of the motor is about $10 - $15.
+Suspected manufacturer: [Sinbad Motor](http://www.sinbad-motor.com/prod_view.aspx?TypeId=27&Id=175&FId=t3:27:3), a Chinese motor manufacturer that makes drop-in Maxon replacements. They seem to offer maxon-style customization. I couldn't find a datasheet on the their website. The product page says the maximum efficiency is 85% (I don't believe it). The retail price of the motor is about $10 - $15.
 
 ### Review
 
-The look and feel of the motor is excellent. 
+Pro
+
+- The look and feel of the motor are excellent. 
+
+Con
+
+- Brass bushing instead of ball bearings for the shaft.
 
 ## Gearbox
 
